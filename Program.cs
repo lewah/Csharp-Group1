@@ -30,7 +30,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
             Console.ReadLine();
             */
 
-            // ARRAYS
+            /* 2  ARRAYS
             //Array 1
             // ? How to change the number of item in an array at run time 
             int [] numbers = new int[6]; // array
@@ -79,8 +79,38 @@ namespace MyApp // Note: actual namespace depends on the project name.
                 Console.Write(zigChar);
             }
             Console.ReadLine();
+            */
 
+            //Methods
+            // Calling Method into static void Main(String[] args)
+            Console.WriteLine("welcome to name Game");
+            Console.Write("First Name : ");
+            string firstName = Console.ReadLine();
+
+            Console.Write("Last Name : ");
+            string lastName = Console.ReadLine();
+
+            MethodOne(firstName);
+            MethodOne(lastName);
+            Console.ReadLine();
 
         }
+
+        //create and call Methods  ,method is a block of code, define helper method inside of class program
+        // Method( MethodOne() )  will be called into static void Main(String[] args)
+        private static void MethodOne( string message)
+        {
+            //Console.WriteLine("Hello, World!");
+            //string message = "hell world ";
+            char[] messageArray = message.ToCharArray();
+            Array.Reverse(messageArray);
+            foreach (char item in messageArray)
+            {
+                Console.Write(item);
+            }
+            Console.Write(" ");
+        }
+        
+
     }
 }
