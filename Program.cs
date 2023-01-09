@@ -82,7 +82,8 @@ namespace MyApp // Note: actual namespace depends on the project name.
             */
 
             //Methods
-            // Calling Method into static void Main(String[] args)
+            // Calling Method into static void Main(String[] args) ----MethodOne
+            /*
             Console.WriteLine("welcome to name Game");
             Console.Write("First Name : ");
             string firstName = Console.ReadLine();
@@ -92,6 +93,12 @@ namespace MyApp // Note: actual namespace depends on the project name.
 
             MethodOne(firstName);
             MethodOne(lastName);
+            Console.ReadLine();
+            */
+
+            // MethodTwo
+            string myValue = MethodTwo("world");
+            Console.WriteLine(myValue);
             Console.ReadLine();
 
         }
@@ -111,6 +118,10 @@ namespace MyApp // Note: actual namespace depends on the project name.
             Console.Write(" ");
         }
         
+        private static string MethodTwo (string name)
+        {
+            return string.Format("Hello, {0} !", name);
+        }
 
     }
 }
