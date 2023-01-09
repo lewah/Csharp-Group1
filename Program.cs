@@ -117,10 +117,15 @@ namespace MyApp // Note: actual namespace depends on the project name.
             }
             Console.Write(" ");
         }
-        
+        // MethodTwo signature , name = MethodTwo ,,datatype of input parameter = string
         private static string MethodTwo (string name)
         {
             return string.Format("Hello, {0} !", name);
+        }
+
+        private static string MethodTwo(int numOne)
+        {
+            return string.Format("Hello, {0} !", numOne);
         }
 
     }
