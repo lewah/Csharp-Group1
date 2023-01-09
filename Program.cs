@@ -81,30 +81,42 @@ namespace MyApp // Note: actual namespace depends on the project name.
             Console.ReadLine();
             */
 
-            //Methods
+            //METHODS -------------- in static void Main(String[] args)
             // Calling Method into static void Main(String[] args) ----MethodOne
             /*
             Console.WriteLine("welcome to name Game");
             Console.Write("First Name : ");
             string firstName = Console.ReadLine();
-
             Console.Write("Last Name : ");
             string lastName = Console.ReadLine();
-
             MethodOne(firstName);
             MethodOne(lastName);
             Console.ReadLine();
             */
 
+            // MethodOne v2
+            Console.Write("First Name : ");
+            string firstName = Console.ReadLine();
+            Console.Write("Last Name : ");
+            string lastName = Console.ReadLine();
+            string revFirstName = MethodOne(firstName);
+            string revLastName = MethodOne(lastName);
+
+            Console.Write(string.Format("{0} {1}", revFirstName , revLastName));
+            
+
             // MethodTwo
+            /*
             string myValue = MethodTwo("world");
             Console.WriteLine(myValue);
             Console.ReadLine();
+            */
 
         }
 
-        //create and call Methods  ,method is a block of code, define helper method inside of class program
-        // Method( MethodOne() )  will be called into static void Main(String[] args)
+        //create and call Methods  ,method is a block of code, define helper method inside of class program, MethodOne= reverse method
+        // Method( MethodOne() )  will be called into static void Main(String[] args)  ,  void = doesnt return anything
+        /* MethodOne V1
         private static void MethodOne( string message)
         {
             //Console.WriteLine("Hello, World!");
@@ -117,6 +129,17 @@ namespace MyApp // Note: actual namespace depends on the project name.
             }
             Console.Write(" ");
         }
+        */
+
+        // MethodOne V2 that return a value 
+        private static string MethodOne(string message)
+        {
+            
+            char[] messageArray = message.ToCharArray();
+            Array.Reverse(messageArray);
+            return string.Concat(messageArray);
+        }
+
         // MethodTwo signature , name = MethodTwo ,,datatype of input parameter = string
         private static string MethodTwo (string name)
         {
