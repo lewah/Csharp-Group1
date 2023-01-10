@@ -111,7 +111,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
             string firstName = Console.ReadLine();
             Console.Write("Last Name : ");
             string lastName = Console.ReadLine();
-
+            
             //string revFirstName = MethodOne(firstName);
             //string revLastName = MethodOne(lastName);
             //MethodOneResult(revFirstName, revLastName);
@@ -166,6 +166,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
             Console.Write(string.Format("{0} {1}", revFirstName, revLastName));
         }
 
+        // you can create different versions of the same method but they have to have different method signature
         // MethodTwo signature , name = MethodTwo ,,datatype of input parameter = string
         private static string MethodTwo (string name)
         {
@@ -184,6 +185,6 @@ namespace MyApp // Note: actual namespace depends on the project name.
             return sum;
 
         }
-
+        
     }
 }
