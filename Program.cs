@@ -95,15 +95,28 @@ namespace MyApp // Note: actual namespace depends on the project name.
             */
 
             // MethodOne v2
+            /*
             Console.Write("First Name : ");
             string firstName = Console.ReadLine();
             Console.Write("Last Name : ");
             string lastName = Console.ReadLine();
             string revFirstName = MethodOne(firstName);
             string revLastName = MethodOne(lastName);
-
-            Console.Write(string.Format("{0} {1}", revFirstName , revLastName));
             
+            Console.Write(string.Format("{0} {1}", revFirstName , revLastName));
+            */
+
+            // MethodOne v3 - MethodOneResult  and private static string MethodOne(string message{}
+            Console.Write("First Name : ");
+            string firstName = Console.ReadLine();
+            Console.Write("Last Name : ");
+            string lastName = Console.ReadLine();
+
+            //string revFirstName = MethodOne(firstName);
+            //string revLastName = MethodOne(lastName);
+            //MethodOneResult(revFirstName, revLastName);
+
+            MethodOneResult(MethodOne(message: firstName), MethodOne(message: lastName)); // message: from MethodOne
 
             // MethodTwo
             /*
@@ -112,6 +125,14 @@ namespace MyApp // Note: actual namespace depends on the project name.
             Console.ReadLine();
             */
 
+            /*C# Methods with Parameters
+            // create class object  
+            Program p1 = new Program();
+            //call method 
+            int sum = p1.AddNumber(100, 100);
+            Console.WriteLine("Sum: " + sum);
+            */
+            Console.ReadLine();
         }
 
         //create and call Methods  ,method is a block of code, define helper method inside of class program, MethodOne= reverse method
@@ -139,6 +160,11 @@ namespace MyApp // Note: actual namespace depends on the project name.
             Array.Reverse(messageArray);
             return string.Concat(messageArray);
         }
+        private static void MethodOneResult(string revFirstName, string revLastName)
+        {
+
+            Console.Write(string.Format("{0} {1}", revFirstName, revLastName));
+        }
 
         // MethodTwo signature , name = MethodTwo ,,datatype of input parameter = string
         private static string MethodTwo (string name)
@@ -149,6 +175,14 @@ namespace MyApp // Note: actual namespace depends on the project name.
         private static string MethodTwo(int numOne)
         {
             return string.Format("Hello, {0} !", numOne);
+        }
+
+        // Method AddNumber
+        private int AddNumber(int a, int b)
+        {
+            int sum = a + b;
+            return sum;
+
         }
 
     }
